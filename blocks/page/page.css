@@ -6,6 +6,7 @@
     -webkit-text-size-adjust: 100%;
     align-items: center;
     background-color: #000000;
+    color: aqua;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -14,5 +15,4 @@
     margin: 0 auto;
     text-rendering: optimizeLegibility;
     width: 100%;
-    font-family: 'Inter';
 }

@@ -5,16 +5,15 @@
     background: none;
     background-image: url(../../../images/heart-button.svg);
     background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 22px;
     height: 19px;
     cursor: pointer;
+    transition: opacity 0.5s;
 }
 
 .photo-card__heart-button:hover {
     opacity: 0.5;
 }
-
-.photo-card__heart-button:active {
-    opacity: 1;
-    background-image: url(../../../images/Edit-Button-active.svg);
-} 

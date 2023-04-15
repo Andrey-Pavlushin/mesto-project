@@ -4,22 +4,25 @@
     width: 24px;
     height: 24px;
     background: none;
-    border: none;
-    background-image: url(../../../images/Edit-Button.svg);
-    background-size: cover;
+    border: 1px solid #FFFFFF;
+    background-image: url(../../../images/edit.svg);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
     cursor: pointer;
-    position: absolute;
-    right: -42px;
+    align-self: center;
+    transition: opacity 0.5s;
 }
 
 .profile__edit-button:hover {
     opacity: 0.6;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .profile__edit-button {
+        background-size: 7.5px;
         width: 18px;
         height: 18px;
-        right: -28px;
     }
 }

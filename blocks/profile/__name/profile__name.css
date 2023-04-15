@@ -1,5 +1,5 @@
 .profile__name {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 42px;
     font-weight: 500;
     line-height: 48px;
@@ -7,7 +7,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: max-content;
+    align-self: flex-end;
+    max-width: fit-content;
 }
 
 @media screen and (max-width: 767px) {

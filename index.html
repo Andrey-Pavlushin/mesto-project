@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Mesto Russia</title>
+    <title lang="en"> Mesto Russia</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 
@@ -14,85 +14,86 @@
         <div class="header__logo"></div>
     </header>
 
-    <section class="place">
-        <div class="profile">
+    <main class="main">
+
+        <section class="profile">
             <img src="./images/Avatar.png" alt="Аватар" class="profile__avatar">
             <div class="profile__info">
-                <div class="profile__name-place">
-                    <h1 class="profile__name">Жак-Ив Кусто</h1>
-                    <button class="profile__edit-button"></button>
-                </div>
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button"></button>
                 <p class="profile__caption">Исследователь океана</p>
             </div>
-        </div>
+            <button type="button" aria-label="Редактировать" class="profile__add-button"></button>
+        </section>
 
-        <button class="profile__add-button"></button>
-    </section>
+        <section aria-label="фотокарточки" class="photo-grid">
+            <ul class="photo-grid__list">
+                <li class="photo-card">
+                    <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="photo-card__image">
+                    <div class="photo-card__header-place">
+                        <h2 class="photo-card__header">Карачаевск</h2>
+                        <button class="photo-card__heart-button"></button>
+                    </div>
+                </li>
+                <li class="photo-card">
+                    <img src="./images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус"
+                        class="photo-card__image">
+                    <div class="photo-card__header-place">
+                        <h2 class="photo-card__header">Гора Эльбрус</h2>
+                        <button class="photo-card__heart-button"></button>
+                    </div>
+                </li>
+                <li class="photo-card">
+                    <img src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="photo-card__image">
+                    <div class="photo-card__header-place">
+                        <h2 class="photo-card__header">Домбай</h2>
+                        <button class="photo-card__heart-button"></button>
+                    </div>
+                </li>
+                <li class="photo-card">
+                    <img src="./images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус"
+                        class="photo-card__image">
+                    <div class="photo-card__header-place">
+                        <h2 class="photo-card__header">Гора Эльбрус</h2>
+                        <button class="photo-card__heart-button"></button>
+                    </div>
+                </li>
+                <li class="photo-card">
+                    <img src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="photo-card__image">
+                    <div class="photo-card__header-place">
+                        <h2 class="photo-card__header">Домбай</h2>
+                        <button class="photo-card__heart-button"></button>
+                    </div>
+                </li>
+                <li class="photo-card">
+                    <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="photo-card__image">
+                    <div class="photo-card__header-place">
+                        <h2 class="photo-card__header">Карачаево-Черкесия</h2>
+                        <button class="photo-card__heart-button"></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-    <section class="photo-grid">
-        <ul class="photo-grid__list">
-            <li class="photo-card">
-                <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="photo-card__image">
-                <div class="photo-card__header-place">
-                    <p class="photo-card__header">Карачаевск</p>
-                    <button class="photo-card__heart-button"></button>
-                </div>
-            </li>
-            <li class="photo-card">
-                <img src="./images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус" class="photo-card__image">
-                <div class="photo-card__header-place">
-                    <p class="photo-card__header">Гора Эльбрус</p>
-                    <button class="photo-card__heart-button"></button>
-                </div>
-            </li>
-            <li class="photo-card">
-                <img src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="photo-card__image">
-                <div class="photo-card__header-place">
-                    <p class="photo-card__header">Домбай</p>
-                    <button class="photo-card__heart-button"></button>
-                </div>
-            </li>
-            <li class="photo-card">
-                <img src="./images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус" class="photo-card__image">
-                <div class="photo-card__header-place">
-                    <p class="photo-card__header">Гора Эльбрус</p>
-                    <button class="photo-card__heart-button"></button>
-                </div>
-            </li>
-            <li class="photo-card">
-                <img src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="photo-card__image">
-                <div class="photo-card__header-place">
-                    <p class="photo-card__header">Домбай</p>
-                    <button class="photo-card__heart-button"></button>
-                </div>
-            </li>
-            <li class="photo-card">
-                <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="photo-card__image">
-                <div class="photo-card__header-place">
-                    <p class="photo-card__header">Карачаево-Черкесия</p>
-                    <button class="photo-card__heart-button"></button>
-                </div>
-            </li>
-        </ul>
-    </section>
-
-    <popup class="popup">
-        <div class="popup__container">
-            <button class="popup__close-button"></button>
-            <form class="form">
-                <h2 class="form__header">Редактировать профиль</h2>
-                <fieldset class="form__info">
-                    <input type="text" name="name" placeholder="Жак-Ив Кусто" class="form__item">
-                    <input type="text" name="caption" placeholder="Исследователь океана" class="form__item">
-                </fieldset>
-                <button class="form__save-button">Сохранить</button>
-            </form>
-        </div>
-    </popup>
+    </main>
 
     <footer class="footer">
-        <p class="footer__copyright"> © 2023 Mesto Russia</p>
+        <p lang="en" class="footer__copyright"> &commat; 2023 Mesto Russia</p>
     </footer>
+
+    <div class="popup">
+        <div class="popup__container">
+            <button class="popup__close-button"></button>
+            <h2 class="popup__header">Редактировать профиль</h2>
+            <form name="Редактировать профиль" class="form">
+                <fieldset class="form__info">
+                    <input type="text" name="Имя" placeholder="Имя" class="form__input form__input_info_name">
+                    <input type="text" name="Подпись" placeholder="Подпись" class="form__input form__input form__input_info_caption">
+                </fieldset>
+                <button type="submit" class="form__save-button">Сохранить</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 

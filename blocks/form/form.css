@@ -1,23 +1,7 @@
 .form {
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    border: none;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 330px;
-    justify-content: center;
     justify-content: space-between;
     margin: 0;
-    padding: 34px 36px 37px;
-    width: 430px;
-}
-
-@media screen and (max-width: 320px) {
-    .form {
-        height: 322px;
-        width: 282px;
-        padding: 25px 22px;
-    }
 }
