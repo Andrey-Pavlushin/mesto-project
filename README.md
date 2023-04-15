@@ -2,7 +2,7 @@
 
 ## Описание
 
-Одностраничный сайт фотогалерея о путешествиях по России https://andrey-pavlushin.github.io/russian-travel
+Одностраничный сайт фотогалерея о путешествиях по России https://andrey-pavlushin.github.io/mesto-project
 
 ### Разрабатывал страницу с помощью:
 
