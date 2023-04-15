@@ -10,9 +10,9 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    font-family: "Inter", "Arial ", sans-serif;
     justify-content: center;
     margin: 0 auto;
-    text-rendering: optimizeLegibility;
     width: 100%;
+    font-family: 'Inter', 'Arial', sans-serif;
+    text-rendering: optimizeLegibility;
 }
