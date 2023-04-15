@@ -1,0 +1,9 @@
+.form__info {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}

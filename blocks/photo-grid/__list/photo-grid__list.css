@@ -1,0 +1,11 @@
+.photo-grid__list {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(281px, 282px) );
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    column-gap: 17px;
+    row-gap: 21px;
+    justify-content: center;
+}

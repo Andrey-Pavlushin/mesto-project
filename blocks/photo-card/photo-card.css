@@ -1,0 +1,12 @@
+.photo-card {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+    height: 361px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+}
