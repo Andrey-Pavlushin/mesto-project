@@ -40,10 +40,29 @@
 @import url(../blocks/popup/__header/popup__header.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 
+/* popup_card */
+@import url(../blocks/popup-card/popup-card.css);
+@import url(../blocks/popup-card/_opened/popup-card_opened.css);
+@import url(../blocks/popup-card/__container//popup-card__container.css);
+@import url(../blocks/popup-card/__header/popup-card__header.css);
+@import url(../blocks/popup-card/__close-button/popup-card__close-button.css);
+
+/* popup_image */
+@import url(../blocks/popup-image/popup-image.css);
+@import url(../blocks/popup-image/_opened/popup-image_opened.css);
+@import url(../blocks/popup-image/__container/popup-image__container.css);
+@import url(../blocks/popup-image/__close-button/popup-image__close-button.css);
+
 /* form */
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__info/form__info.css);
 @import url(../blocks/form/__save-button/form__save-button.css);
 @import url(../blocks/form/__input/form__input.css);
+
+/* form_card */
+@import url(../blocks/form-card/from-card.css);
+@import url(../blocks/form-card/__info/from-card__info.css);
+@import url(../blocks/form-card/__save-button/form-card__save-button.css);
+@import url(../blocks/form-card/__input/form-card__input.css);
 
 @import url(../blocks/page/page.css);

@@ -1,0 +1,16 @@
+.form-card__input {
+    border: none;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+}
+
+.form-card__input::-webkit-input-placeholder {color:rgb(0,0,0,0.6);}
+.form-card__input::-moz-placeholder          {color:rgb(0,0,0,0.6);}
+.form-card__input::-ms-input-placeholder     {color:rgb(0,0,0,0.6);}
+.form-card__input::placeholder               {color:rgb(0,0,0,0.6);}

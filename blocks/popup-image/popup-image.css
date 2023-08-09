@@ -1,0 +1,29 @@
+.popup-image {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.popup-image__text {
+  align-self: flex-start;
+  color: #fff;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 55vw;
+}
+
+.popup-image__url {
+  max-width: 75vw;
+  max-height: 75vh;
+}

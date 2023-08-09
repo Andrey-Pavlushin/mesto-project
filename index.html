@@ -27,61 +27,15 @@
         </section>
 
         <section aria-label="фотокарточки" class="photo-grid">
-            <ul class="photo-grid__list">
-                <li class="photo-card">
-                    <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="photo-card__image">
-                    <div class="photo-card__header-place">
-                        <h2 class="photo-card__header">Карачаевск</h2>
-                        <button type="button" aria-label="Лайкнуть" class="photo-card__heart-button"></button>
-                    </div>
-                </li>
-                <li class="photo-card">
-                    <img src="./images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус"
-                        class="photo-card__image">
-                    <div class="photo-card__header-place">
-                        <h2 class="photo-card__header">Гора Эльбрус</h2>
-                        <button type="button" aria-label="Лайкнуть" class="photo-card__heart-button"></button>
-                    </div>
-                </li>
-                <li class="photo-card">
-                    <img src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="photo-card__image">
-                    <div class="photo-card__header-place">
-                        <h2 class="photo-card__header">Домбай</h2>
-                        <button type="button" aria-label="Лайкнуть" class="photo-card__heart-button"></button>
-                    </div>
-                </li>
-                <li class="photo-card">
-                    <img src="./images/kirill-pershin-1404681-unsplash.png" alt="Гора Эльбрус"
-                        class="photo-card__image">
-                    <div class="photo-card__header-place">
-                        <h2 class="photo-card__header">Гора Эльбрус</h2>
-                        <button type="button" aria-label="Лайкнуть" class="photo-card__heart-button"></button>
-                    </div>
-                </li>
-                <li class="photo-card">
-                    <img src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай" class="photo-card__image">
-                    <div class="photo-card__header-place">
-                        <h2 class="photo-card__header">Домбай</h2>
-                        <button type="button" aria-label="Лайкнуть" class="photo-card__heart-button"></button>
-                    </div>
-                </li>
-                <li class="photo-card">
-                    <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="photo-card__image">
-                    <div class="photo-card__header-place">
-                        <h2 class="photo-card__header">Карачаево-Черкесия</h2>
-                        <button type="button" aria-label="Лайкнуть" class="photo-card__heart-button"></button>
-                    </div>
-                </li>
-            </ul>
+            <ul class="photo-grid__list"></ul>
         </section>
-
     </main>
 
     <footer class="footer">
         <p lang="en" class="footer__copyright"> &commat; 2023 Mesto Russia</p>
     </footer>
 
-    <div class="popup popup_opened">
+    <div class="popup">
         <div class="popup__container">
             <button type="button" aria-label="Закрыть" class="popup__close-button"></button>
             <h2 class="popup__header">Редактировать профиль</h2>
@@ -94,6 +48,30 @@
             </form>
         </div>
     </div>
+
+    <div class="popup-card">
+        <div class="popup-card__container">
+            <button type="button" aria-label="Закрыть" class="popup-card__close-button"></button>
+            <h2 class="popup-card__header">Новое место</h2>
+            <form name="editProfile" class="form-card">
+                <fieldset class="form-card__info">
+                    <input type="text" name="editCardName" placeholder="Название" class="form-card__input form-card__input_info_name">
+                    <input type="text" name="editCardCaption" placeholder="Ссылка на картинку" class="form-card__input form-card__input_info_image">
+                </fieldset>
+                <button type="submit" class="form-card__save-button">Создать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup-image">
+        <div class="popup-image__container">
+            <button type="button" aria-label="Закрыть" class="popup-image__close-button"></button>
+            <img class="popup-image__url" src="" alt="">
+            <p class="popup-image__text"></p>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
 
 </body>
 
