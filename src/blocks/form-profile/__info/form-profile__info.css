@@ -1,0 +1,20 @@
+.form-profile__info {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0;
+  padding: 0 0 48px;
+  width: 100%;
+}
+
+.form-profile__info-field {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .form-profile__info {
+    padding: 0 0 15px;
+  }
+}
