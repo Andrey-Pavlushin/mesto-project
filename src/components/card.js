@@ -46,7 +46,9 @@ export function createCard(
   image.alt = card.name;
   label.textContent = card.name;
 
-  trashButton.addEventListener("click", (e) => e.target.parentNode.remove());
+  trashButton.addEventListener("click", (e) => {
+    e.target.closest(".photo-card").remove();
+  });
   image.addEventListener("click", (e) =>
     addToPopupImage(e, popupImage, popupImageUrl, popupImageText)
   );
@@ -56,10 +58,5 @@ export function createCard(
 }
 
 function toggleLikeButton(e) {
-  const classes = e.target.classList;
-  if (classes.contains("photo-card__heart-button_active")) {
-    classes.remove("photo-card__heart-button_active");
-  } else {
-    classes.add("photo-card__heart-button_active");
-  }
+  e.target.classList.toggle("photo-card__heart-button_active");
 }

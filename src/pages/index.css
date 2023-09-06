@@ -54,7 +54,7 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/_opened/popup__container.css);
 
-/* form */
+/* form-profile */
 @import url(../blocks/form-profile/form-profile.css);
 @import url(../blocks/form-profile/__info/form-profile__info.css);
 @import url(../blocks/form-profile/__save-button/form-profile__save-button.css);
@@ -65,5 +65,9 @@
 @import url(../blocks/form-card/__info/form-card__info.css);
 @import url(../blocks/form-card/__save-button/form-card__save-button.css);
 @import url(../blocks/form-card/__input/form-card__input.css);
+
+/* form */
+@import url(../blocks/form/__input_type_error/form____input_type_error.css);
+@import url(../blocks/form/__save-button_disabled/form__save-button_disabled.css);
 
 @import url(../blocks/page/page.css);

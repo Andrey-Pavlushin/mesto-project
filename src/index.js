@@ -30,9 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const profilePopupForm = document.querySelector(".form-profile");
   const formName = document.querySelector(".form-profile__input_info_name");
-  const formCaption = document.querySelector(".form-profile__input_info_caption");
+  const formCaption = document.querySelector(
+    ".form-profile__input_info_caption"
+  );
 
   const formCard = document.querySelector(".form-card");
+  const formCardSaveButton = document.querySelector(".form-card__save-button");
   const formCardName = document.querySelector(".form-card__input_info_name");
   const formCardImage = document.querySelector(".form-card__input_info_image");
 
@@ -76,25 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
       cardList.firstChild
     );
     closePopup(popupCard);
+      formCardSaveButton.disabled = true;
+      formCardSaveButton.classList.add("form__save-button_disabled");
     e.target.reset();
   });
 
   enableValidation({
-    formSelector: ".form-card",
-    inputSelector: ".form-card__input",
-    submitButtonSelector: ".form-card__save-button",
-    inactiveButtonClass: "form-card__save-button_disabled",
-    inputErrorClass: "form-card__input_type_error",
-    errorClass: "form-card__error_visible",
-  });
-
-  enableValidation({
-    formSelector: ".form-profile",
-    inputSelector: ".form-profile__input",
-    submitButtonSelector: ".form-profile__save-button",
-    inactiveButtonClass: "form-profile__save-button_disabled",
-    inputErrorClass: "form-profile__input_type_error",
-    errorClass: "form-profile__error_visible",
+    formSelector: ".form",
+    inputSelector: ".form__input",
+    submitButtonSelector: ".form__save-button",
+    inactiveButtonClass: "form__save-button_disabled",
+    inputErrorClass: "form__input_type_error",
+    errorClass: "form__error_visible",
   });
 
   [popupCard, popupImage, popupProfile].forEach((popup) =>

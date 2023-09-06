@@ -2,9 +2,7 @@ export function addToPopupImage(e, popupImage, popupImageUrl, popupImageText) {
   openPopup(popupImage);
   popupImageUrl.src = e.target.src;
   popupImageUrl.alt = e.target.alt;
-  popupImageText.textContent = e.target.parentNode.querySelector(
-    ".photo-card__header"
-  ).textContent;
+  popupImageText.textContent = e.target.alt;
 }
 
 export function closePopup(popup) {

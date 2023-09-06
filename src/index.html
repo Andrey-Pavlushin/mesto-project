@@ -67,9 +67,9 @@
           class="popup-profile__close-button"
         ></button>
         <h2 class="popup-profile__header">Редактировать профиль</h2>
-        <form name="editProfile" class="form-profile" novalidate>
+        <form name="editProfile" class="form form-profile" novalidate>
           <fieldset class="form-profile__info">
-            <label for="profile-name__input" class="form-profile__info-field">
+            <label for="profile-name__input" class="form__info-field form-profile__info-field">
               <input
                 id="profile-name__input"
                 type="text"
@@ -80,10 +80,10 @@
                 maxlength="30"
                 pattern="^[А-Яа-яЁёA-Za-z\s\-]+$"
                 data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
-                class="form-profile__input form-profile__input_info_name"
-              />
+                class="form__input form-profile__input form-profile__input_info_name"
+               />
               <span
-                class="form-profile__input-error profile-name__input-error"
+                class="form__input-error form-profile__input-error profile-name__input-error"
               ></span>
             </label>
             <label
@@ -96,14 +96,14 @@
                 type="text"
                 name="editCaption"
                 placeholder="Подпись"
-                class="form-profile__input form-profile__input_info_caption"
+                class="form__input form-profile__input form-profile__input_info_caption"
               />
               <span
-                class="form-profile__input-error profile-caption__input-error"
+                class="form__input-error form-profile__input-error profile-caption__input-error"
               ></span>
             </label>
           </fieldset>
-          <button type="submit" class="form-profile__save-button">
+          <button type="submit" class="form__save-button form-profile__save-button">
             Сохранить
           </button>
         </form>
@@ -118,7 +118,7 @@
           class="popup-card__close-button"
         ></button>
         <h2 class="popup-card__header">Новое место</h2>
-        <form name="editCard" class="form-card" novalidate>
+        <form name="editCard" class="form form-card" novalidate>
           <fieldset class="form-card__info">
             <label for="card-name__input" class="form-card__info-field">
               <input
@@ -131,10 +131,10 @@
                 name="editCardName"
                 placeholder="Название"
                 data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
-                class="form-card__input form-card__input_info_name"
+                class="form__input form-card__input form-card__input_info_name"
               />
               <span
-                class="form-card__input-error card-name__input-error"
+                class="form__input-error form-card__input-error card-name__input-error"
               ></span>
             </label>
             <label for="card-image__input" class="form-card__info-field">
@@ -144,16 +144,17 @@
                 required
                 name="editCardCaption"
                 placeholder="Ссылка на картинку"
-                class="form-card__input form-card__input_info_image"
+                class="form__input form-card__input form-card__input_info_image"
               />
               <span
-                class="form-card__input-error card-image__input-error"
+                class="form__input-error form-card__input-error card-image__input-error"
               ></span>
             </label>
           </fieldset>
           <button
+            disabled
             type="submit"
-            class="form-card__save-button form-card__save-button_disabled"
+            class="form__save-button form-card__save-button form__save-button_disabled"
           >
             Создать
           </button>
