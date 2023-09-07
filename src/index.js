@@ -93,8 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
     errorClass: "form__error_visible",
   });
 
-  [popupCard, popupImage, popupProfile].forEach((popup) =>
-    popup.addEventListener("click", (e) => closePopup(e.target))
+[popupCard, popupImage, popupProfile].forEach((popup) =>
+    popup.addEventListener("click", (e) => {
+      if (e.target === e.currentTarget) closePopup(e.target);
+    })
   );
 
   function addFormText() {
