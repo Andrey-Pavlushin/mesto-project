@@ -1,0 +1,19 @@
+.photo-card__heart-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    background-image: url(../../../../images/heart-button.svg);
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 19px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.photo-card__heart-button:hover {
+    opacity: 0.5;
+}

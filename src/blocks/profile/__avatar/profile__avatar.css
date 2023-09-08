@@ -1,8 +1,31 @@
 .profile__avatar {
-    display: block;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile__avatar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("../../../images/edit-avatar.svg");
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile__avatar:hover::after {
+  opacity: 1;
 }

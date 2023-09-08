@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Andrey Pavlushin",
   "license": "ISC",
@@ -25,6 +27,7 @@
   },
   "dependencies": {
     "core-js": "^3.32.1",
+    "gh-pages": "^6.0.0",
     "mini-css-extract-plugin": "^2.7.6"
   }
 }
