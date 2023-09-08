@@ -29,8 +29,8 @@ import { addCardLike, deleteCard, myId, removeCardLike } from "./api.js";
        deleteCard(card._id)
          .then(() => {
            {
-     e.target.closest(".photo-card").remove();
-   };
+            e.target.closest(".photo-card").remove();
+          }
          })
          .catch((err) => console.log(err));
      });
@@ -53,13 +53,19 @@ import { addCardLike, deleteCard, myId, removeCardLike } from "./api.js";
 
  function toggleLikeButton(likeButton, cardId, likeNumber) {
    if (likeButton.classList.contains("photo-card__heart-button_active")) {
-     removeActiveHeart(likeButton);
-     removeCardLike(cardId);
-     likeNumber.textContent = +likeNumber.textContent - 1;
-   } else {
-     addActiveHeart(likeButton);
-     addCardLike(cardId);
-     likeNumber.textContent = +likeNumber.textContent + 1;
+    removeCardLike(cardId)
+    .then((result) => {
+      removeActiveHeart(likeButton);
+      likeNumber.textContent = result.likes.length;
+    })
+    .catch((err) => console.log(err));
+} else {
+  addCardLike(cardId)
+    .then((result) => {
+      addActiveHeart(likeButton);
+      likeNumber.textContent = result.likes.length;
+    })
+    .catch((err) => console.log(err));
    }
  }
 

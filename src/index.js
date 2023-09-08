@@ -57,8 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const formAvatar = document.querySelector(".form-avatar");
   const formAvatarLink = document.querySelector(".form-avatar__input");
-  const formAvatarSaveButton = document.querySelector(".form-avatar__save-button");
-
+  const formAvatarSaveButton = document.querySelector(
+    ".form-avatar__save-button"
+  );
+  
   const formCard = document.querySelector(".form-card");
   const formCardSaveButton = document.querySelector(".form-card__save-button");
   const formCardName = document.querySelector(".form-card__input_info_name");
@@ -67,26 +69,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardList = document.querySelector(".photo-grid__list");
   const cardTemplate = document.querySelector("#card");
 
-  getInitialCards()
-     .then((result) =>
-       result.forEach((card) =>
+  Promise.all([getUserInfo(), getInitialCards()])
+     .then(([userData, cards]) => {
+       cards.forEach((card) =>
          cardList.appendChild(
            createCard(
              card,
-             cardTemplate,
-             popupImage,
-             popupImageUrl,
+            cardTemplate,
+            popupImage,
+            popupImageUrl,
              popupImageText
            )
          )
-       )
-     )
-     .catch((err) => console.log(err));
-
-   getUserInfo()
-     .then((result) => {
-       addFormText(result.name, result.about);
-       profileAvatarImage.src = result.avatar;
+       );
+       addFormText(userData.name, userData.about);
+       profileAvatarImage.src = userData.avatar;
      })
      .catch((err) => console.log(err));
 
@@ -111,14 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     profileSaveButton.textContent = "Сохранение...";
     updateUserInfo(formName.value, formCaption.value)
-      .then((result) => {
-        addFormText(result.name, result.about);
-        closePopup(popupProfile);
-        profileSaveButton.textContent = "Сохранить";
-      })
-      .catch((err) => console.log(err));
-    e.target.reset();
-  });
+       .then((result) => {
+         addFormText(result.name, result.about);
+         closePopup(popupProfile);
+         e.target.reset();
+       })
+       .catch((err) => console.log(err))
+       .finally(() => (profileSaveButton.textContent = "Сохранить"));
+   });
 
   formCard.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -134,15 +131,15 @@ document.addEventListener("DOMContentLoaded", () => {
             popupImageText
           ),
           cardList.firstChild
-        );
-        popupCardSaveButton.textContent = "Сохранить";
-        closePopup(popupCard);
-      })
-      .catch((err) => console.log(err));
-    formCardSaveButton.disabled = true;
-    formCardSaveButton.classList.add("form__save-button_disabled");
-    e.target.reset();
-  });
+          );
+          closePopup(popupCard);
+          e.target.reset();
+        })
+        .catch((err) => console.log(err))
+        .finally(() => (popupCardSaveButton.textContent = "Сохранить"));
+      formCardSaveButton.disabled = true;
+      formCardSaveButton.classList.add("form__save-button_disabled");
+    });
 
   formAvatar.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -152,13 +149,13 @@ document.addEventListener("DOMContentLoaded", () => {
         profileAvatarImage.src = result.avatar;
         popupAvatarSaveButton.textContent = "Сохранить";
         closePopup(popupAvatar);
-      })
-      .catch((err) => console.log(err));
-    formAvatarSaveButton.disabled = true;
-    formAvatarSaveButton.classList.add("form__save-button_disabled");
-
-    e.target.reset();
-  });
+        e.target.reset();
+       })
+       .catch((err) => console.log(err))
+       .finally(() => (popupAvatarSaveButton.textContent = "Сохранить"));
+     formAvatarSaveButton.disabled = true;
+     formAvatarSaveButton.classList.add("form__save-button_disabled");
+   });
 
   enableValidation({
     formSelector: ".form",
